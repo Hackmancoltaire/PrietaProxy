@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<project name="ArtemisProxy" default="jar" basedir=".">
+	<description>ArtemisProxy build file.</description>
+	<property name="src" location="."/>
+	<property name="build" location="build"/>
+
+	<target name="init">
+		<mkdir dir="${build}"/>
+	</target>
+
+<target name="clean">
+	<delete dir="./build"/>
+</target>
+
+<target name="compile" depends="init">
+	<mkdir dir="./build/classes"/>
+	<javac srcdir="${src}" destdir="${build}/classes">
+		<classpath>
+			<pathelement path="lib/artclientlib-2.5.0.jar"/>
+			<pathelement path="lib/asg.cliche-110413.jar"/>
+			<pathelement path="lib/RXTXcomm.jar"/>
+		</classpath>
+	</javac>
+</target>
+
+<target name="jar" depends="compile">
+	<mkdir dir="./build/jar"/>
+	<jar destfile="./build/jar/ArtemisProxy.jar" basedir="./build/classes">
+		<zipgroupfileset dir="lib" includes="artclientlib-2.5.0.jar" />
+		<zipgroupfileset dir="lib" includes="asg.cliche-110413.jar" />
+		<zipgroupfileset dir="lib" includes="RXTXcomm.jar" />
+			<manifest>
+				<attribute name="Main-Class" value="ArtemisProxy"/>
+				<attribute name="ArtemisProxy" value="main"/>
+			</manifest>
+	</jar>
+</target>
+
+<target name="run">
+	<java jar="./build/jar/ArtemisProxy.jar" classname="${main-class}" fork="true"/>
+</target>
+
+</project>
