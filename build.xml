@@ -14,9 +14,9 @@
 
 <target name="compile" depends="init">
 	<mkdir dir="./build/classes"/>
-	<javac srcdir="${src}" destdir="${build}/classes">
+	<javac srcdir="${src}" destdir="${build}/classes" includeantruntime="false">
 		<classpath>
-			<pathelement path="lib/artclientlib-2.5.0.jar"/>
+			<!-- <pathelement path="lib/artclientlib-2.5.0.jar"/> -->
 			<pathelement path="lib/asg.cliche-110413.jar"/>
 			<pathelement path="lib/RXTXcomm.jar"/>
 		</classpath>
@@ -25,8 +25,13 @@
 
 <target name="jar" depends="compile">
 	<mkdir dir="./build/jar"/>
+	<copy todir="./build/classes/dat">
+		<fileset dir="./dat"></fileset>
+	</copy>
 	<jar destfile="./build/jar/ArtemisProxy.jar" basedir="./build/classes">
-		<zipgroupfileset dir="lib" includes="artclientlib-2.5.0.jar" />
+		<!-- <zipgroupfileset dir="lib" includes="artclientlib-2.5.0.jar" /> -->
+		
+		
 		<zipgroupfileset dir="lib" includes="asg.cliche-110413.jar" />
 		<zipgroupfileset dir="lib" includes="RXTXcomm.jar" />
 			<manifest>

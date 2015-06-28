@@ -10,7 +10,9 @@
 		8967622C1B12582800403E7D /* ArtemisProxy.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = ArtemisProxy.java; sourceTree = "<group>"; };
 		8967622E1B12635100403E7D /* build.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
 		8967622F1B12655200403E7D /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = "<group>"; };
-		898552471B131A5A00C5C9BA /* TwoWaySerialComm.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = TwoWaySerialComm.java; sourceTree = "<group>"; };
+		8978144A1B3E2532006C21A8 /* SerialWriter.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = SerialWriter.java; sourceTree = "<group>"; };
+		89A9BAEB1B366AA500FDF299 /* net */ = {isa = PBXFileReference; lastKnownFileType = folder; path = net; sourceTree = "<group>"; };
+		89A9BAEC1B366EC000FDF299 /* ProxyListener.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = ProxyListener.java; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -19,7 +21,9 @@
 			children = (
 				8967622E1B12635100403E7D /* build.xml */,
 				8967622C1B12582800403E7D /* ArtemisProxy.java */,
-				898552471B131A5A00C5C9BA /* TwoWaySerialComm.java */,
+				8978144A1B3E2532006C21A8 /* SerialWriter.java */,
+				89A9BAEC1B366EC000FDF299 /* ProxyListener.java */,
+				89A9BAEB1B366AA500FDF299 /* net */,
 				8967622F1B12655200403E7D /* lib */,
 			);
 			sourceTree = "<group>";
