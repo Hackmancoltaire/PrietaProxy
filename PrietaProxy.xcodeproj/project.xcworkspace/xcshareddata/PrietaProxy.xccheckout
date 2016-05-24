@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>FB107AF5-F79C-469D-B1AE-035906BAB1E4</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>PrietaProxy</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>33E7E51F5098F096AD5C3BF2BA8227A4BB3D31B9</key>
 		<string>https://github.com/Hackmancoltaire/PrietaProxy.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>PrietaProxy.xcodeproj/project.xcworkspace</string>
+	<string>PrietaProxy.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>33E7E51F5098F096AD5C3BF2BA8227A4BB3D31B9</key>

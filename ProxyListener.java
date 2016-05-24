@@ -5,20 +5,20 @@ import gnu.io.SerialPort;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import net.dhleong.acl.util.BoolState;
-import net.dhleong.acl.enums.*;
-import net.dhleong.acl.iface.*;
+import com.walkertribe.ian.util.BoolState;
+import com.walkertribe.ian.enums.*;
+import com.walkertribe.ian.iface.*;
 
-import net.dhleong.acl.world.*;
-import net.dhleong.acl.vesseldata.*;
+import com.walkertribe.ian.world.*;
+import com.walkertribe.ian.vesseldata.*;
 
-import net.dhleong.acl.protocol.*;
-import net.dhleong.acl.protocol.core.*;
-import net.dhleong.acl.protocol.core.setup.*;
-import net.dhleong.acl.protocol.core.world.*;
-import net.dhleong.acl.protocol.core.helm.*;
-import net.dhleong.acl.protocol.core.comm.*;
-import net.dhleong.acl.protocol.core.weap.*;
+import com.walkertribe.ian.protocol.*;
+import com.walkertribe.ian.protocol.core.*;
+import com.walkertribe.ian.protocol.core.setup.*;
+import com.walkertribe.ian.protocol.core.world.*;
+import com.walkertribe.ian.protocol.core.helm.*;
+import com.walkertribe.ian.protocol.core.comm.*;
+import com.walkertribe.ian.protocol.core.weap.*;
 
 public class ProxyListener {
 	public ArtemisNetworkInterface server;
@@ -64,7 +64,7 @@ public class ProxyListener {
 	}
 	
 	@Listener
-	public void onUpdatePacket(MainPlayerUpdatePacket pkt) {
+	public void onUpdatePacket(ObjectUpdatePacket pkt) {
 		if (mgr != null) {
 			ArtemisPlayer player = mgr.getPlayerShip(0);
 			
@@ -136,7 +136,7 @@ public class ProxyListener {
 				else { new SerialWriter(this.out, "s"); }
 				
 				// Red Alert
-				if (player.getRedAlertState().getBooleanValue()) { new SerialWriter(this.out, "R"); }
+				if (player.getAlertStatus() == AlertStatus.RED) { new SerialWriter(this.out, "R"); }
 				else { new SerialWriter(this.out, "r"); }
 				
 				// Movement

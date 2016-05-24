@@ -11,8 +11,8 @@
 		8967622E1B12635100403E7D /* build.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
 		8967622F1B12655200403E7D /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = "<group>"; };
 		8978144A1B3E2532006C21A8 /* SerialWriter.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = SerialWriter.java; sourceTree = "<group>"; };
-		89A9BAEB1B366AA500FDF299 /* net */ = {isa = PBXFileReference; lastKnownFileType = folder; path = net; sourceTree = "<group>"; };
 		89A9BAEC1B366EC000FDF299 /* ProxyListener.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = ProxyListener.java; sourceTree = "<group>"; };
+		89B564A61CF4174900E9B28D /* com */ = {isa = PBXFileReference; lastKnownFileType = folder; path = com; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -23,7 +23,7 @@
 				8967622C1B12582800403E7D /* ArtemisProxy.java */,
 				8978144A1B3E2532006C21A8 /* SerialWriter.java */,
 				89A9BAEC1B366EC000FDF299 /* ProxyListener.java */,
-				89A9BAEB1B366AA500FDF299 /* net */,
+				89B564A61CF4174900E9B28D /* com */,
 				8967622F1B12655200403E7D /* lib */,
 			);
 			sourceTree = "<group>";
@@ -51,7 +51,7 @@
 		896762221B12580700403E7D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Ramon Yvarra";
 				TargetAttributes = {
 					896762261B12580700403E7D = {
@@ -96,6 +96,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;

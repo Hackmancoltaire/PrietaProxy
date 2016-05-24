@@ -16,20 +16,20 @@ import java.io.OutputStream;
 import asg.cliche.Command;
 import asg.cliche.ShellFactory;
 
-import net.dhleong.acl.util.BoolState;
-import net.dhleong.acl.enums.*;
-import net.dhleong.acl.iface.*;
+import com.walkertribe.ian.util.BoolState;
+import com.walkertribe.ian.enums.*;
+import com.walkertribe.ian.iface.*;
 
-import net.dhleong.acl.world.*;
-import net.dhleong.acl.vesseldata.*;
+import com.walkertribe.ian.world.*;
+import com.walkertribe.ian.vesseldata.*;
 
-import net.dhleong.acl.protocol.*;
-import net.dhleong.acl.protocol.core.*;
-import net.dhleong.acl.protocol.core.setup.*;
-import net.dhleong.acl.protocol.core.world.*;
-import net.dhleong.acl.protocol.core.helm.*;
-import net.dhleong.acl.protocol.core.comm.*;
-import net.dhleong.acl.protocol.core.weap.*;
+import com.walkertribe.ian.protocol.*;
+import com.walkertribe.ian.protocol.core.*;
+import com.walkertribe.ian.protocol.core.setup.*;
+import com.walkertribe.ian.protocol.core.world.*;
+import com.walkertribe.ian.protocol.core.helm.*;
+import com.walkertribe.ian.protocol.core.comm.*;
+import com.walkertribe.ian.protocol.core.weap.*;
 
 public class ArtemisProxy implements Runnable {
 
@@ -49,7 +49,7 @@ public class ArtemisProxy implements Runnable {
 		
 		try {
 			// Load the vessel data, otherwise it will crash during certain packets
-			VesselData.load(new File("."));
+			VesselData.setArtemisInstallPath(new File("."));
 		} catch (VesselDataException ex) {
 			ex.printStackTrace();
 		}
